@@ -3,200 +3,819 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tire Care Mobile Service | Luxury & Supercar Tire Specialists</title>
 
+  <title>Tire Care Mobile Service | Mobile Tire Mounting, Balancing & Wheel Services | Clearwater & St. Pete</title>
+
+  <!-- SEO META -->
+  <meta name="description" content="Tire Care Mobile Service provides elite mobile tire mounting, balancing, wheel services, flat repair, and roadside assistance in Clearwater, St. Petersburg, and surrounding Tampa Bay areas. Call 24/7 for emergency or scheduled service." />
+  <meta name="keywords" content="mobile tire service Clearwater, mobile tire service St Petersburg, mobile tire mounting, mobile wheel balancing, tire balancing, flat tire repair roadside, tire replacement mobile, luxury tire service, exotic car tire service, Tampa Bay mobile tires" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tire Care Mobile Service | Mobile Tire Mounting & Wheel Balancing | Tampa Bay" />
+  <meta property="og:description" content="White glove mobile tire and wheel service for luxury, exotic, and high-performance vehicles. 24/7 emergency and scheduled service in Clearwater & St. Pete." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1920" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tire Care Mobile Service | Mobile Tire Mounting & Wheel Balancing" />
+  <meta name="twitter:description" content="Mobile tire mounting, balancing, and wheel services across Clearwater & St. Pete. Call 24/7." />
+
+  <!-- Tailwind / Icons / Fonts -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+    :root { --gold: #D4AF37; }
+
     body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+
     .hero-gradient {
-      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-      url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1920');
+      background:
+        radial-gradient(1200px 600px at 50% 20%, rgba(212,175,55,0.08), transparent 60%),
+        linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.78)),
+        url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1920');
       background-size: cover;
       background-position: center;
     }
-    .gold-text { color: #D4AF37; }
-    .gold-bg { background-color: #D4AF37; }
+
+    .gold-text { color: var(--gold); }
+    .gold-bg { background-color: var(--gold); }
+
+    /* Premium glow effect */
+    .glow-card {
+      position: relative;
+      transition: transform 250ms ease, border-color 250ms ease, box-shadow 250ms ease;
+      box-shadow: 0 0 0 rgba(212,175,55,0);
+    }
+    .glow-card::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: 24px;
+      background: radial-gradient(600px 200px at 20% 0%, rgba(212,175,55,0.18), transparent 60%),
+                  radial-gradient(600px 200px at 80% 0%, rgba(212,175,55,0.12), transparent 60%);
+      opacity: 0;
+      transition: opacity 250ms ease;
+      pointer-events: none;
+    }
+    .glow-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(212,175,55,0.7);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.45), 0 0 24px rgba(212,175,55,0.14);
+    }
+    .glow-card:hover::before { opacity: 1; }
+
+    /* Subtle gold shimmer button */
+    .shimmer {
+      position: relative;
+      overflow: hidden;
+    }
+    .shimmer::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 50%;
+      height: 200%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+      transform: rotate(20deg);
+      transition: left 650ms ease;
+    }
+    .shimmer:hover::after { left: 120%; }
+
+    /* "Sticky Call Now" for mobile */
+    .sticky-call {
+      position: fixed;
+      bottom: 14px;
+      left: 14px;
+      right: 14px;
+      z-index: 60;
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .sticky-call { display: block; }
+      body { padding-bottom: 86px; } /* space for sticky bar */
+    }
+
+    /* Smooth anchor offset because of fixed nav */
+    section { scroll-margin-top: 90px; }
   </style>
+
+  <!-- Local Business + Services (SEO Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "Tire Care Mobile Service",
+    "areaServed": [
+      { "@type": "City", "name": "Clearwater", "addressRegion": "FL" },
+      { "@type": "City", "name": "St. Petersburg", "addressRegion": "FL" },
+      { "@type": "City", "name": "Largo", "addressRegion": "FL" },
+      { "@type": "City", "name": "Dunedin", "addressRegion": "FL" },
+      { "@type": "City", "name": "Palm Harbor", "addressRegion": "FL" },
+      { "@type": "City", "name": "Tampa", "addressRegion": "FL" }
+    ],
+    "telephone": "+1-813-648-0099",
+    "url": "https://example.com",
+    "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1920",
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "67"
+    },
+    "makesOffer": [
+      { "@type": "Offer", "name": "Mobile Wheel Balancing" },
+      { "@type": "Offer", "name": "Tire Mounting & Installation" },
+      { "@type": "Offer", "name": "Roadside Flat Repair" },
+      { "@type": "Offer", "name": "Tire Replacement (New/Used)" },
+      { "@type": "Offer", "name": "Rotation & Safety Check" }
+    ]
+  }
+  </script>
 </head>
 
 <body class="bg-zinc-950 text-white">
 
-<!-- NAV -->
-<nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-zinc-800">
-  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-    <span class="text-2xl font-extrabold italic tracking-tight">
-      TIRE CARE<span class="gold-text"> MOBILE</span>
-    </span>
-    <div class="hidden md:flex gap-8 items-center">
-      <a href="#services" class="hover:text-yellow-500 font-medium">Services</a>
-      <a href="#areas" class="hover:text-yellow-500 font-medium">Service Areas</a>
-      <a href="#reviews" class="hover:text-yellow-500 font-medium">Reviews</a>
-      <a href="tel:8136480099" class="gold-bg text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-500 transition">
-        <i class="fa-solid fa-phone mr-2"></i>(813) 648-0099
-      </a>
-    </div>
+  <!-- MOBILE STICKY CALL -->
+  <div class="sticky-call">
+    <a href="tel:8136480099" class="w-full flex items-center justify-center gap-3 gold-bg text-black font-extrabold py-4 rounded-2xl shadow-2xl shimmer">
+      <i class="fa-solid fa-phone"></i>
+      Call Now (24/7) • (813) 648-0099
+    </a>
   </div>
-</nav>
 
-<!-- HERO -->
-<section class="hero-gradient h-screen flex items-center justify-center text-center px-6">
-  <div class="max-w-4xl">
-    <div class="inline-block px-4 py-1 border border-yellow-500 rounded-full text-yellow-500 text-sm font-bold mb-6 tracking-widest uppercase">
-      5-Star Rated White Glove Service
-    </div>
+  <!-- NAV -->
+  <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <div class="flex-shrink-0 flex items-center">
+          <span class="text-2xl font-extrabold tracking-tighter italic">TIRE CARE<span class="gold-text"> MOBILE</span></span>
+        </div>
 
-    <h1 class="text-5xl md:text-7xl font-extrabold mb-6">
-      Elite Tire Care For <span class="gold-text">Elite Performance</span>
-    </h1>
-
-    <p class="text-xl text-zinc-300 mb-10 max-w-2xl mx-auto">
-      Mobile tire service specializing in luxury, exotic, and high-performance vehicles across Clearwater & St. Pete.
-    </p>
-
-    <div class="flex flex-col md:flex-row gap-4 justify-center">
-      <a href="tel:8136480099" class="bg-white text-black px-10 py-4 rounded-full font-bold text-lg hover:bg-zinc-200 transition">
-        Request Emergency Service
-      </a>
-      <a href="#services" class="border border-white/30 px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition">
-        View Services
-      </a>
-    </div>
-
-    <div class="mt-10 flex items-center justify-center gap-3">
-      <div class="flex text-yellow-500">
-        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-      </div>
-      <span class="text-zinc-400">67+ Google Reviews</span>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="py-24 px-6">
-  <div class="max-w-7xl mx-auto">
-    <h2 class="text-4xl font-bold text-center mb-14">Precision Services</h2>
-
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800">
-        <i class="fas fa-truck-fast text-3xl gold-text mb-4"></i>
-        <h3 class="text-2xl font-bold mb-3">Mobile Tire Replacement</h3>
-        <p class="text-zinc-400">Zero-scratch mounting for luxury and exotic wheels.</p>
-      </div>
-
-      <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800">
-        <i class="fas fa-screwdriver-wrench text-3xl gold-text mb-4"></i>
-        <h3 class="text-2xl font-bold mb-3">Flat Repair & Balancing</h3>
-        <p class="text-zinc-400">Emergency roadside repairs with precision balancing.</p>
-      </div>
-
-      <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800">
-        <i class="fas fa-gem text-3xl gold-text mb-4"></i>
-        <h3 class="text-2xl font-bold mb-3">Supercar Handling</h3>
-        <p class="text-zinc-400">Low-profile, center-lock, and performance setups.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section id="reviews" class="py-24 bg-zinc-900">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold mb-3">Verified Google Reviews</h2>
-      <p class="text-zinc-400">Tap any review to view on Google</p>
-    </div>
-
-    <div class="flex justify-end mb-6">
-      <select id="sortReviews" class="bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-2 text-sm">
-        <option value="relevant">Most relevant</option>
-        <option value="newest">Newest</option>
-        <option value="highest">Highest</option>
-        <option value="lowest">Lowest</option>
-      </select>
-    </div>
-
-    <div id="reviewGrid" class="grid md:grid-cols-3 gap-8">
-
-      <!-- REVIEW CARD -->
-      <a href="https://maps.app.goo.gl/hFT7SvCDyQE9fabT8" target="_blank"
-         class="review bg-zinc-950 p-8 rounded-3xl border border-zinc-800 hover:border-yellow-500 transition"
-         data-rating="5" data-age="1" data-relevance="100">
-        <div class="flex justify-between mb-3">
-          <div>
-            <p class="font-bold">Alif Kamal</p>
-            <p class="text-xs text-zinc-500">4 reviews · 12 photos</p>
-          </div>
-          <div class="text-yellow-500">
-            ★★★★★
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-8">
+            <a href="#services" class="hover:text-yellow-500 px-3 py-2 text-sm font-medium transition">Services</a>
+            <a href="#why" class="hover:text-yellow-500 px-3 py-2 text-sm font-medium transition">Why Us</a>
+            <a href="#areas" class="hover:text-yellow-500 px-3 py-2 text-sm font-medium transition">Service Areas</a>
+            <a href="#reviews" class="hover:text-yellow-500 px-3 py-2 text-sm font-medium transition">Reviews</a>
+            <a href="tel:8136480099" class="gold-bg text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-500 transition shadow-lg shadow-yellow-500/20 shimmer">
+              <i class="fa-solid fa-phone mr-2"></i>(813) 648-0099
+            </a>
           </div>
         </div>
-        <p class="text-zinc-300">
-          Best tire service ever. They did a bang on job. Would recommend 100%.
-        </p>
-        <p class="text-xs text-zinc-500 mt-4">29 minutes ago · New</p>
-      </a>
+      </div>
+    </div>
+  </nav>
 
-      <a href="https://share.google/DbR7GNWicRNiY0HJV" target="_blank"
-         class="review bg-zinc-950 p-8 rounded-3xl border border-zinc-800 hover:border-yellow-500 transition"
-         data-rating="5" data-age="2" data-relevance="95">
-        <div class="flex justify-between mb-3">
-          <div>
-            <p class="font-bold">Zia Dela Pena</p>
-            <p class="text-xs text-zinc-500">2 reviews · 2 photos</p>
-          </div>
-          <div class="text-yellow-500">★★★★★</div>
+  <!-- HERO -->
+  <section class="hero-gradient h-screen flex items-center justify-center text-center px-4">
+    <div class="max-w-4xl">
+      <div class="inline-block px-4 py-1 border border-yellow-500/70 rounded-full text-yellow-500 text-sm font-bold mb-6 tracking-widest uppercase bg-black/30 backdrop-blur">
+        5-Star Rated • White Glove Mobile Service
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+        Elite Tire & Wheel Care For <span class="gold-text">Luxury Performance</span>
+      </h1>
+
+      <p class="text-xl md:text-2xl text-zinc-300 mb-10 max-w-2xl mx-auto">
+        We bring the tire shop to your driveway or roadside. Mobile tire mounting, balancing, wheel services, and emergency flat repairs across Clearwater & St. Pete.
+      </p>
+
+      <div class="flex flex-col md:flex-row gap-4 justify-center">
+        <a href="tel:8136480099" class="bg-white text-black px-10 py-4 rounded-full font-extrabold text-lg hover:bg-zinc-200 transition shimmer">
+          Call Now (Emergency or Appointment)
+        </a>
+        <a href="#services" class="bg-transparent border-2 border-white/30 backdrop-blur-sm px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition">
+          View Services
+        </a>
+      </div>
+
+      <!-- Clickable reviews jump -->
+      <div class="mt-12 flex items-center justify-center space-x-4">
+        <div class="flex text-yellow-500">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
         </div>
-        <p class="text-zinc-300">
-          Highly recommended — very reasonable and honest.
-        </p>
-      </a>
+        <a href="#reviews" class="text-zinc-400 hover:text-yellow-500 transition font-semibold underline underline-offset-4">
+          67+ Google Reviews
+        </a>
+      </div>
 
-      <a href="https://share.google/IqASmGU3NELU7reGf" target="_blank"
-         class="review bg-zinc-950 p-8 rounded-3xl border border-zinc-800 hover:border-yellow-500 transition"
-         data-rating="5" data-age="7" data-relevance="90">
-        <div class="flex justify-between mb-3">
-          <div>
-            <p class="font-bold">Yuki Lam</p>
-            <p class="text-xs text-zinc-500">Local Guide · 12 reviews</p>
-          </div>
-          <div class="text-yellow-500">★★★★★</div>
-        </div>
-        <p class="text-zinc-300">
-          Yez was amazing, quick, honest, and super professional. Highly recommend.
-        </p>
-      </a>
+      <!-- Quick promise row -->
+      <div class="mt-8 flex flex-wrap justify-center gap-3 text-sm">
+        <span class="px-4 py-2 rounded-full bg-zinc-900/70 border border-zinc-800">
+          <i class="fa-solid fa-clock gold-text mr-2"></i>Fast Response
+        </span>
+        <span class="px-4 py-2 rounded-full bg-zinc-900/70 border border-zinc-800">
+          <i class="fa-solid fa-shield-halved gold-text mr-2"></i>Zero-Scratch Mindset
+        </span>
+        <span class="px-4 py-2 rounded-full bg-zinc-900/70 border border-zinc-800">
+          <i class="fa-solid fa-location-dot gold-text mr-2"></i>Roadside or Driveway
+        </span>
+        <span class="px-4 py-2 rounded-full bg-zinc-900/70 border border-zinc-800">
+          <i class="fa-solid fa-phone gold-text mr-2"></i>Call Anytime 24/7
+        </span>
+      </div>
+    </div>
+  </section>
 
+  <!-- STATS BAR -->
+  <div class="bg-zinc-900 border-y border-zinc-800 py-10">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <div class="text-4xl font-bold gold-text mb-2">24/7</div>
+        <div class="text-zinc-500 uppercase text-xs tracking-widest">Availability</div>
+      </div>
+      <div>
+        <div class="text-4xl font-bold gold-text mb-2">100%</div>
+        <div class="text-zinc-500 uppercase text-xs tracking-widest">Care First Approach</div>
+      </div>
+      <div>
+        <div class="text-4xl font-bold gold-text mb-2">30–60m</div>
+        <div class="text-zinc-500 uppercase text-xs tracking-widest">Typical Response Window</div>
+      </div>
+      <div>
+        <div class="text-4xl font-bold gold-text mb-2">67+</div>
+        <div class="text-zinc-500 uppercase text-xs tracking-widest">5-Star Reviews</div>
+      </div>
     </div>
   </div>
-</section>
 
-<!-- FOOTER -->
-<footer class="bg-black border-t border-zinc-900 py-12 text-center text-zinc-500 text-sm">
-  © 2026 Tire Care Mobile Service · Clearwater & St. Petersburg · 24/7 Emergency
-</footer>
+  <!-- SERVICES -->
+  <section id="services" class="py-24 px-4 bg-zinc-950">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4">Mobile Tire & Wheel Services</h2>
+        <p class="text-zinc-400 max-w-3xl mx-auto">
+          Clear, straightforward service so customers know exactly what you do. Emergency or scheduled — roadside, driveway, home, or office.
+        </p>
+      </div>
 
-<script>
-  const sortSelect = document.getElementById('sortReviews');
-  const grid = document.getElementById('reviewGrid');
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800 glow-card">
+          <div class="w-14 h-14 gold-bg rounded-2xl flex items-center justify-center mb-6 text-black text-2xl">
+            <i class="fas fa-truck-fast"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Mobile Tire Replacement</h3>
+          <p class="text-zinc-400 leading-relaxed">
+            New or used tires sold and installed on-site. Perfect for luxury wheels and low-profile setups.
+          </p>
+          <ul class="mt-5 space-y-2 text-zinc-300 text-sm">
+            <li><i class="fa-solid fa-check gold-text mr-2"></i>Driveway, office, or roadside</li>
+            <li><i class="fa-solid fa-check gold-text mr-2"></i>High-end vehicle friendly</li>
+            <li><i class="fa-solid fa-check gold-text mr-2"></i>Emergency or appointment</li>
+          </ul>
+        </div>
 
-  sortSelect.addEventListener('change', () => {
-    const cards = Array.from(grid.children);
-    const type = sortSelect.value;
+        <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800 glow-card">
+          <div class="w-14 h-14 gold-bg rounded-2xl flex items-center justify-center mb-6 text-black text-2xl">
+            <i class="fas fa-scale-balanced"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Wheel Balancing</h3>
+          <p class="text-zinc-400 leading-relaxed">
+            Mobile balancing to reduce vibration and improve ride quality, especially on performance vehicles.
+          </p>
+          <ul class="mt-5 space-y-2 text-zinc-300 text-sm">
+            <li><i class="fa-solid fa-check gold-text mr-2"></i>Vibration diagnosis (steering/seat)</li>
+            <li><i class="fa-solid fa-check gold-text mr-2"></i>High-speed stability focus</li>
+            <li><i class="fa-solid fa-check gold-text mr-2"></i>Luxury & exotic ready</li>
+          </ul>
+        </div>
 
-    cards.sort((a, b) => {
-      if (type === 'newest') return a.dataset.age - b.dataset.age;
-      if (type === 'highest') return b.dataset.rating - a.dataset.rating;
-      if (type === 'lowest') return a.dataset.rating - b.dataset.rating;
-      return b.dataset.relevance - a.dataset.relevance;
-    });
+        <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800 glow-card">
+          <div class="w-14 h-14 gold-bg rounded-2xl flex items-center justify-center mb-6 text-black text-2xl">
+            <i class="fas fa-screwdriver-wrench"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Flat Repair & Roadside Help</h3>
+          <p class="text-zinc-400 leading-relaxed">
+            Stuck? We come to you. Fast flat repairs and safety checks so you can get moving again.
+          </p>
+          <ul class="mt-5 space-y-2 text-zinc-300 text-sm">
+            <li><i class="fa-solid fa-check gold-text mr-2"></i>Roadside, parking lot, driveway</li>
+            <li><i class="fa-solid fa-check gold-text mr-2"></i>Honest options explained</li>
+            <li><i class="fa-solid fa-check gold-text mr-2"></i>Call anytime — 24/7</li>
+          </ul>
+        </div>
+      </div>
 
-    cards.forEach(card => grid.appendChild(card));
-  });
-</script>
+      <!-- Extra services row -->
+      <div class="mt-10 grid md:grid-cols-2 gap-8">
+        <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800 glow-card">
+          <h3 class="text-2xl font-bold mb-3">Also Available</h3>
+          <div class="grid sm:grid-cols-2 gap-3 text-zinc-300 text-sm">
+            <div class="flex items-center"><i class="fa-solid fa-circle-check gold-text mr-2"></i>Tire Mounting</div>
+            <div class="flex items-center"><i class="fa-solid fa-circle-check gold-text mr-2"></i>Tire Balancing</div>
+            <div class="flex items-center"><i class="fa-solid fa-circle-check gold-text mr-2"></i>Rotation</div>
+            <div class="flex items-center"><i class="fa-solid fa-circle-check gold-text mr-2"></i>Air / Pressure Checks</div>
+            <div class="flex items-center"><i class="fa-solid fa-circle-check gold-text mr-2"></i>Road Hazard Help</div>
+            <div class="flex items-center"><i class="fa-solid fa-circle-check gold-text mr-2"></i>Luxury Rim Care Focus</div>
+          </div>
+          <p class="text-zinc-500 text-xs mt-4">
+            If you’re not sure, call — you’ll get a straight answer fast.
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-br from-zinc-900 to-black p-8 rounded-3xl border border-zinc-800 glow-card">
+          <h3 class="text-2xl font-bold mb-3">Need Help Right Now?</h3>
+          <p class="text-zinc-300 leading-relaxed mb-6">
+            Emergency or not — roadside or driveway — call anytime. We’ll confirm what you need, give the plan, and get you handled.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="tel:8136480099" class="gold-bg text-black font-extrabold py-4 px-6 rounded-2xl text-center hover:bg-yellow-500 transition shimmer">
+              Call Now • (813) 648-0099
+            </a>
+            <a href="#areas" class="bg-zinc-950 border border-zinc-800 text-white font-bold py-4 px-6 rounded-2xl text-center hover:border-yellow-500 transition">
+              Check Service Areas
+            </a>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-3 text-xs text-zinc-400">
+            <span class="px-3 py-2 rounded-full bg-zinc-950 border border-zinc-800"><i class="fa-solid fa-bolt gold-text mr-2"></i>Fast response</span>
+            <span class="px-3 py-2 rounded-full bg-zinc-950 border border-zinc-800"><i class="fa-solid fa-car-side gold-text mr-2"></i>Luxury ready</span>
+            <span class="px-3 py-2 rounded-full bg-zinc-950 border border-zinc-800"><i class="fa-solid fa-shield gold-text mr-2"></i>Careful handling</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="why" class="py-20 bg-zinc-900 border-y border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-4xl font-bold mb-6">Why Drivers Choose <span class="gold-text">Tire Care Mobile</span></h2>
+        <p class="text-zinc-300 text-lg mb-6 leading-relaxed">
+          Luxury wheels and low-profile tires require a different level of attention. We focus on clean work, clear communication, and getting you back on the road without the hassle of waiting at a shop.
+        </p>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="bg-zinc-950 border border-zinc-800 rounded-2xl p-5 glow-card">
+            <p class="font-bold mb-1"><i class="fa-solid fa-star gold-text mr-2"></i>5-Star Reputation</p>
+            <p class="text-sm text-zinc-400">Trusted across Tampa Bay by luxury owners.</p>
+          </div>
+          <div class="bg-zinc-950 border border-zinc-800 rounded-2xl p-5 glow-card">
+            <p class="font-bold mb-1"><i class="fa-solid fa-clock gold-text mr-2"></i>Time-Saving</p>
+            <p class="text-sm text-zinc-400">We come to your home, job, or roadside.</p>
+          </div>
+          <div class="bg-zinc-950 border border-zinc-800 rounded-2xl p-5 glow-card">
+            <p class="font-bold mb-1"><i class="fa-solid fa-shield-halved gold-text mr-2"></i>Careful Handling</p>
+            <p class="text-sm text-zinc-400">Focused on preventing marks and damage.</p>
+          </div>
+          <div class="bg-zinc-950 border border-zinc-800 rounded-2xl p-5 glow-card">
+            <p class="font-bold mb-1"><i class="fa-solid fa-phone gold-text mr-2"></i>Simple Process</p>
+            <p class="text-sm text-zinc-400">Call, confirm, we roll out. That’s it.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-zinc-950 border border-zinc-800 rounded-3xl p-8 glow-card">
+        <div class="flex items-center gap-3 mb-4">
+          <i class="fa-solid fa-headset text-2xl gold-text"></i>
+          <h3 class="text-2xl font-bold">What to Tell Us On the Phone</h3>
+        </div>
+        <p class="text-zinc-300 mb-5">
+          This makes it fast for you and fast for us:
+        </p>
+        <ul class="space-y-3 text-zinc-300">
+          <li class="flex items-start gap-3"><i class="fa-solid fa-check gold-text mt-1"></i><span><b>Vehicle</b> (year/make/model) + wheel size if you know it</span></li>
+          <li class="flex items-start gap-3"><i class="fa-solid fa-check gold-text mt-1"></i><span><b>What happened</b> (flat, vibration, new tires, etc.)</span></li>
+          <li class="flex items-start gap-3"><i class="fa-solid fa-check gold-text mt-1"></i><span><b>Location</b> (roadside, driveway, office, parking lot)</span></li>
+          <li class="flex items-start gap-3"><i class="fa-solid fa-check gold-text mt-1"></i><span><b>Timing</b> (now / today / schedule)</span></li>
+        </ul>
+        <a href="tel:8136480099" class="mt-7 inline-flex items-center justify-center gap-3 gold-bg text-black font-extrabold py-4 px-6 rounded-2xl hover:bg-yellow-500 transition shimmer w-full">
+          <i class="fa-solid fa-phone"></i> Call Now • 24/7
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREAS -->
+  <section id="areas" class="py-20 bg-zinc-950">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+      <div class="md:w-1/2">
+        <h2 class="text-4xl font-bold mb-6">Service Areas Across <span class="gold-text">Tampa Bay</span></h2>
+        <p class="text-zinc-300 text-lg mb-8 italic">
+          “Roadside, driveway, home, or office — we bring the tire shop to you.”
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-4 text-zinc-300">
+          <div class="flex items-center"><i class="fas fa-location-dot gold-text mr-3"></i> Clearwater & Clearwater Beach</div>
+          <div class="flex items-center"><i class="fas fa-location-dot gold-text mr-3"></i> St. Petersburg & St. Pete Beach</div>
+          <div class="flex items-center"><i class="fas fa-location-dot gold-text mr-3"></i> Largo & Belleair</div>
+          <div class="flex items-center"><i class="fas fa-location-dot gold-text mr-3"></i> Palm Harbor & Dunedin</div>
+          <div class="flex items-center"><i class="fas fa-location-dot gold-text mr-3"></i> Tampa & Surrounding Areas</div>
+          <div class="flex items-center"><i class="fas fa-location-dot gold-text mr-3"></i> Pinellas & Hillsborough County</div>
+        </div>
+
+        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+          <a href="tel:8136480099" class="gold-bg text-black font-extrabold py-4 px-6 rounded-2xl text-center hover:bg-yellow-500 transition shimmer">
+            Call Now • (813) 648-0099
+          </a>
+          <a href="#reviews" class="bg-zinc-900 border border-zinc-800 text-white font-bold py-4 px-6 rounded-2xl text-center hover:border-yellow-500 transition">
+            See Reviews
+          </a>
+        </div>
+      </div>
+
+      <div class="md:w-1/2 w-full h-80 bg-zinc-900 rounded-3xl overflow-hidden flex items-center justify-center border border-zinc-800 glow-card">
+        <div class="text-center p-8">
+          <i class="fas fa-map-marked-alt text-6xl text-zinc-600 mb-4"></i>
+          <p class="text-zinc-400 uppercase tracking-widest font-bold">Pinellas County + Tampa Bay Coverage</p>
+          <p class="text-zinc-500 text-sm mt-3">Call and we’ll confirm your area fast.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="py-24 bg-zinc-900 border-y border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4">
+
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-zinc-800 bg-zinc-950/60">
+          <div class="flex text-yellow-500 text-sm">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        <span class="text-zinc-300 font-semibold text-sm">5.0 • 67+ Reviews</span>
+        </div>
+
+        <h2 class="text-4xl font-bold mt-6">Verified Google Reviews</h2>
+        <p class="text-zinc-400 mt-3 max-w-2xl mx-auto">
+          Tap any review to open it on Google.
+        </p>
+      </div>
+
+      <!-- Controls -->
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
+        <div class="flex items-center gap-3 text-zinc-400">
+          <i class="fa-brands fa-google text-xl"></i>
+          <span class="text-sm">Source: Google Reviews</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="text-sm text-zinc-400 font-semibold">Sort by</span>
+          <div class="relative">
+            <select id="reviewSort"
+              class="appearance-none bg-zinc-950 border border-zinc-800 text-white rounded-xl px-4 py-3 pr-10 text-sm font-semibold hover:border-yellow-500 transition focus:outline-none focus:ring-2 focus:ring-yellow-500/30">
+              <option value="relevant" selected>Most relevant</option>
+              <option value="newest">Newest</option>
+              <option value="highest">Highest</option>
+              <option value="lowest">Lowest</option>
+            </select>
+            <i class="fas fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-zinc-500 pointer-events-none"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reviews Grid -->
+      <div id="reviewsGrid" class="grid md:grid-cols-3 gap-8">
+
+        <!-- 1 -->
+        <a href="https://maps.app.goo.gl/hFT7SvCDyQE9fabT8" target="_blank" rel="noopener"
+           class="review-card block bg-zinc-950 p-8 rounded-3xl border border-zinc-800 glow-card group"
+           data-rating="5" data-minutes="29" data-relevant="100">
+          <div class="flex items-start justify-between gap-4 mb-5">
+            <div>
+              <p class="font-bold text-lg">Alif Kamal</p>
+              <p class="text-zinc-500 text-sm">4 reviews • 12 photos</p>
+            </div>
+            <div class="text-right">
+              <div class="flex justify-end text-yellow-500 text-sm">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="text-zinc-500 text-xs mt-1">29 minutes ago • <span class="text-green-400 font-bold">New</span></p>
+            </div>
+          </div>
+
+          <p class="text-zinc-300 leading-relaxed">
+            Best tire service ever. They did a bang on job. Would recommend 100%
+          </p>
+
+          <div class="mt-6 flex items-center justify-between">
+            <span class="text-yellow-500 font-bold text-sm group-hover:text-yellow-400 transition">
+              View on Google <i class="fas fa-arrow-up-right-from-square ml-2"></i>
+            </span>
+            <span class="text-zinc-600 text-xs">Tap to open</span>
+          </div>
+        </a>
+
+        <!-- 2 -->
+        <a href="https://share.google/DbR7GNWicRNiY0HJV" target="_blank" rel="noopener"
+           class="review-card block bg-zinc-950 p-8 rounded-3xl border border-zinc-800 glow-card group"
+           data-rating="5" data-minutes="1440" data-relevant="92">
+          <div class="flex items-start justify-between gap-4 mb-5">
+            <div>
+              <p class="font-bold text-lg">Zia Dela Pena</p>
+              <p class="text-zinc-500 text-sm">2 reviews • 2 photos</p>
+            </div>
+            <div class="text-right">
+              <div class="flex justify-end text-yellow-500 text-sm">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="text-zinc-500 text-xs mt-1">a day ago • <span class="text-green-400 font-bold">New</span></p>
+            </div>
+          </div>
+
+          <p class="text-zinc-300 leading-relaxed">
+            Highly recommended — very reasonable and honest.
+          </p>
+
+          <div class="mt-5 p-4 rounded-2xl border border-zinc-800 bg-black/20">
+            <p class="text-xs uppercase tracking-wider text-zinc-500 font-bold mb-2">Tire care mobile service (Owner)</p>
+            <p class="text-zinc-300 text-sm leading-relaxed">
+              Thank you so much! I’m glad you were happy with the service—truly appreciate the support!
+            </p>
+            <p class="text-zinc-500 text-xs mt-2">4 hours ago</p>
+          </div>
+
+          <div class="mt-6 flex items-center justify-between">
+            <span class="text-yellow-500 font-bold text-sm group-hover:text-yellow-400 transition">
+              View on Google <i class="fas fa-arrow-up-right-from-square ml-2"></i>
+            </span>
+            <span class="text-zinc-600 text-xs">Tap to open</span>
+          </div>
+        </a>
+
+        <!-- 3 -->
+        <a href="https://share.google/IqASmGU3NELU7reGf" target="_blank" rel="noopener"
+           class="review-card block bg-zinc-950 p-8 rounded-3xl border border-zinc-800 glow-card group"
+           data-rating="5" data-minutes="10080" data-relevant="90">
+          <div class="flex items-start justify-between gap-4 mb-5">
+            <div>
+              <p class="font-bold text-lg">Yuki Lam</p>
+              <p class="text-zinc-500 text-sm">Local Guide • 12 reviews • 51 photos</p>
+            </div>
+            <div class="text-right">
+              <div class="flex justify-end text-yellow-500 text-sm">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="text-zinc-500 text-xs mt-1">a week ago • <span class="text-green-400 font-bold">New</span></p>
+            </div>
+          </div>
+
+          <p class="text-zinc-300 leading-relaxed">
+            To start off, Yez is amazing. He was able to come out to me very quickly, especially around the holidays...
+          </p>
+
+          <div class="mt-5 p-4 rounded-2xl border border-zinc-800 bg-black/20">
+            <p class="text-xs uppercase tracking-wider text-zinc-500 font-bold mb-2">Tire care mobile service (Owner)</p>
+            <p class="text-zinc-300 text-sm leading-relaxed">
+              Thank you so much! I truly appreciate the kind words and the recommendation. I’m really glad I could get to you quickly and help find a solution. It was a pleasure helping you out!
+            </p>
+            <p class="text-zinc-500 text-xs mt-2">4 hours ago</p>
+          </div>
+
+          <div class="mt-6 flex items-center justify-between">
+            <span class="text-yellow-500 font-bold text-sm group-hover:text-yellow-400 transition">
+              View on Google <i class="fas fa-arrow-up-right-from-square ml-2"></i>
+            </span>
+            <span class="text-zinc-600 text-xs">Tap to open</span>
+          </div>
+        </a>
+
+        <!-- 4 -->
+        <a href="https://share.google/VCzpN4z68CC14n7Dj" target="_blank" rel="noopener"
+           class="review-card block bg-zinc-950 p-8 rounded-3xl border border-zinc-800 glow-card group"
+           data-rating="5" data-minutes="20160" data-relevant="86">
+          <div class="flex items-start justify-between gap-4 mb-5">
+            <div>
+              <p class="font-bold text-lg">Roshawn Greene</p>
+              <p class="text-zinc-500 text-sm">1 review</p>
+            </div>
+            <div class="text-right">
+              <div class="flex justify-end text-yellow-500 text-sm">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="text-zinc-500 text-xs mt-1">2 weeks ago • <span class="text-green-400 font-bold">New</span></p>
+            </div>
+          </div>
+
+          <p class="text-zinc-300 leading-relaxed">
+            Shout out to tire care mobile service for there great service.. my guy yezen came on this holiday and did my tire change at my house...
+          </p>
+
+          <div class="mt-5 p-4 rounded-2xl border border-zinc-800 bg-black/20">
+            <p class="text-xs uppercase tracking-wider text-zinc-500 font-bold mb-2">Tire care mobile service (Owner)</p>
+            <p class="text-zinc-300 text-sm leading-relaxed">
+              Thank you so much for the shout-out! I really appreciate the support and I’m glad I could help you out on the holiday.
+            </p>
+            <p class="text-zinc-500 text-xs mt-2">4 hours ago</p>
+          </div>
+
+          <div class="mt-6 flex items-center justify-between">
+            <span class="text-yellow-500 font-bold text-sm group-hover:text-yellow-400 transition">
+              View on Google <i class="fas fa-arrow-up-right-from-square ml-2"></i>
+            </span>
+            <span class="text-zinc-600 text-xs">Tap to open</span>
+          </div>
+        </a>
+
+        <!-- 5 -->
+        <a href="https://share.google/Ud3zT2zksxMqJeVnK" target="_blank" rel="noopener"
+           class="review-card block bg-zinc-950 p-8 rounded-3xl border border-zinc-800 glow-card group"
+           data-rating="5" data-minutes="20160" data-relevant="84">
+          <div class="flex items-start justify-between gap-4 mb-5">
+            <div>
+              <p class="font-bold text-lg">alexander garcia</p>
+              <p class="text-zinc-500 text-sm">4 reviews</p>
+            </div>
+            <div class="text-right">
+              <div class="flex justify-end text-yellow-500 text-sm">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="text-zinc-500 text-xs mt-1">2 weeks ago • <span class="text-green-400 font-bold">New</span></p>
+            </div>
+          </div>
+
+          <p class="text-zinc-300 leading-relaxed">
+            Yez was amazing. He was the only one available on Christmas. Got it done in about 45 to an hour. 4 brand new tires for cheap
+          </p>
+
+          <div class="mt-5 p-4 rounded-2xl border border-zinc-800 bg-black/20">
+            <p class="text-xs uppercase tracking-wider text-zinc-500 font-bold mb-2">Tire care mobile service (Owner)</p>
+            <p class="text-zinc-300 text-sm leading-relaxed">
+              Thank you so much! I’m really glad I could help out, especially on Christmas. Appreciate you choosing me and the kind words!
+            </p>
+            <p class="text-zinc-500 text-xs mt-2">4 hours ago</p>
+          </div>
+
+          <div class="mt-6 flex items-center justify-between">
+            <span class="text-yellow-500 font-bold text-sm group-hover:text-yellow-400 transition">
+              View on Google <i class="fas fa-arrow-up-right-from-square ml-2"></i>
+            </span>
+            <span class="text-zinc-600 text-xs">Tap to open</span>
+          </div>
+        </a>
+
+        <!-- 6 -->
+        <a href="https://share.google/LSHBPFJZSc8PUqMr4" target="_blank" rel="noopener"
+           class="review-card block bg-zinc-950 p-8 rounded-3xl border border-zinc-800 glow-card group"
+           data-rating="5" data-minutes="20160" data-relevant="82">
+          <div class="flex items-start justify-between gap-4 mb-5">
+            <div>
+              <p class="font-bold text-lg">jonathan carreras</p>
+              <p class="text-zinc-500 text-sm">Local Guide • 14 reviews • 1 photo</p>
+            </div>
+            <div class="text-right">
+              <div class="flex justify-end text-yellow-500 text-sm">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="text-zinc-500 text-xs mt-1">2 weeks ago • <span class="text-green-400 font-bold">New</span></p>
+            </div>
+          </div>
+
+          <p class="text-zinc-300 leading-relaxed">
+            Yez was quick and super detailed. Amazing work! Highly recommend!! Very professional.
+          </p>
+
+          <div class="mt-5 p-4 rounded-2xl border border-zinc-800 bg-black/20">
+            <p class="text-xs uppercase tracking-wider text-zinc-500 font-bold mb-2">Tire care mobile service (Owner)</p>
+            <p class="text-zinc-300 text-sm leading-relaxed">
+              Thank you! I’m glad you were happy with the work. Truly appreciate the support and recommendation!
+            </p>
+            <p class="text-zinc-500 text-xs mt-2">4 hours ago</p>
+          </div>
+
+          <div class="mt-6 flex items-center justify-between">
+            <span class="text-yellow-500 font-bold text-sm group-hover:text-yellow-400 transition">
+              View on Google <i class="fas fa-arrow-up-right-from-square ml-2"></i>
+            </span>
+            <span class="text-zinc-600 text-xs">Tap to open</span>
+          </div>
+        </a>
+
+        <!-- 7 -->
+        <a href="https://share.google/U7cVRG9UCkF93DxO2" target="_blank" rel="noopener"
+           class="review-card block bg-zinc-950 p-8 rounded-3xl border border-zinc-800 glow-card group"
+           data-rating="5" data-minutes="40320" data-relevant="80">
+          <div class="flex items-start justify-between gap-4 mb-5">
+            <div>
+              <p class="font-bold text-lg">Additional Reviews</p>
+              <p class="text-zinc-500 text-sm">More verified Google feedback</p>
+            </div>
+            <div class="text-right">
+              <div class="flex justify-end text-yellow-500 text-sm">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="text-zinc-500 text-xs mt-1">Tap to view</p>
+            </div>
+          </div>
+
+          <p class="text-zinc-300 leading-relaxed">
+            Open Google to see the latest reviews, photos, and updates.
+          </p>
+
+          <div class="mt-6 flex items-center justify-between">
+            <span class="text-yellow-500 font-bold text-sm group-hover:text-yellow-400 transition">
+              View on Google <i class="fas fa-arrow-up-right-from-square ml-2"></i>
+            </span>
+            <span class="text-zinc-600 text-xs">Tap to open</span>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- CTA under reviews -->
+      <div class="mt-12 text-center">
+        <a href="tel:8136480099" class="inline-flex items-center justify-center gap-3 gold-bg text-black font-extrabold py-4 px-8 rounded-2xl hover:bg-yellow-500 transition shimmer">
+          <i class="fa-solid fa-phone"></i> Call Now • Get a Quote Fast
+        </a>
+        <p class="text-zinc-500 text-sm mt-4">
+          Emergency or not — roadside or driveway — call anytime.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black pt-20 pb-10 border-t border-zinc-900">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12 mb-16">
+      <div>
+        <span class="text-2xl font-extrabold italic mb-6 block">TIRE CARE<span class="gold-text"> MOBILE</span></span>
+        <p class="text-zinc-500 mb-6">
+          Premium mobile tire and wheel solutions for Clearwater and St. Pete’s most discerning drivers.
+          Available 24/7 for emergency or scheduled service.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#" class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center hover:bg-yellow-500 hover:text-black transition">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center hover:bg-yellow-500 hover:text-black transition">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-bold mb-6 text-lg uppercase tracking-wider">Quick Contact</h4>
+        <p class="text-zinc-400 mb-2">
+          Phone: <a href="tel:8136480099" class="hover:text-yellow-500">(813) 648-0099</a>
+        </p>
+        <p class="text-zinc-400 mb-2">
+          Availability: <span class="text-green-500 font-bold">Open 24 Hours</span>
+        </p>
+        <p class="text-zinc-400">
+          Area: Clearwater • St. Petersburg • Tampa Bay
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-bold mb-6 text-lg uppercase tracking-wider">Ready to Roll?</h4>
+        <a href="tel:8136480099" class="block w-full text-center gold-bg text-black font-extrabold py-4 rounded-xl hover:bg-yellow-500 transition shimmer">
+          Call For Immediate Service
+        </a>
+        <p class="text-zinc-500 text-sm mt-4">
+          Emergency or appointment. Roadside or driveway.
+        </p>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 text-center border-t border-zinc-900 pt-10 text-zinc-600 text-sm">
+      &copy; 2026 Tire Care Mobile Service. All Rights Reserved. Mobile Tire Mounting • Wheel Balancing • Roadside Assistance.
+    </div>
+  </footer>
+
+  <!-- SORT SCRIPT -->
+  <script>
+    (function () {
+      const sort = document.getElementById("reviewSort");
+      const grid = document.getElementById("reviewsGrid");
+      if (!sort || !grid) return;
+
+      function toNum(v) {
+        const n = Number(v);
+        return Number.isFinite(n) ? n : 0;
+      }
+
+      sort.addEventListener("change", () => {
+        const cards = Array.from(grid.querySelectorAll(".review-card"));
+        const type = sort.value;
+
+        cards.sort((a, b) => {
+          const ar = toNum(a.dataset.rating);
+          const br = toNum(b.dataset.rating);
+          const am = toNum(a.dataset.minutes);   // smaller = newer
+          const bm = toNum(b.dataset.minutes);
+          const aRel = toNum(a.dataset.relevant);
+          const bRel = toNum(b.dataset.relevant);
+
+          if (type === "newest") return am - bm;
+          if (type === "highest") return br - ar;
+          if (type === "lowest") return ar - br;
+          return bRel - aRel; // relevant
+        });
+
+        cards.forEach(card => grid.appendChild(card));
+      });
+    })();
+  </script>
 
 </body>
 </html>
