@@ -3,37 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tire Care Mobile Service | St. Pete & Clearwater Elite Tire Care</title>
+    <title>Tire Care Mobile Service | Luxury & Supercar Tire Specialists</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Oswald:wght@700&display=swap" rel="stylesheet">
     <style>
         :root { --gold: #D4AF37; }
-        body { font-family: 'Inter', sans-serif; background-color: #050505; color: white; overflow-x: hidden; }
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: white; scroll-behavior: smooth; }
+        
         .hero-bg { 
-            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&q=80&w=2000');
-            background-size: cover; background-position: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&q=80&w=2000'); 
+            background-size: cover; background-position: center; 
         }
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-        .gold-border { border-color: var(--gold); }
+        
         .gold-text { color: var(--gold); }
         .gold-bg { background-color: var(--gold); }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); }
+        .heading-font { font-family: 'Oswald', sans-serif; }
+        
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); }
+        
+        /* Scroll Animations */
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.9s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        .service-card:hover { border-color: var(--gold); transform: translateY(-8px); transition: all 0.4s ease; }
     </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 glass border-b border-white/10">
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-xl border-b border-zinc-900">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <div class="text-2xl font-black italic tracking-tighter uppercase">
-                Tire Care<span class="gold-text italic font-light"> Mobile</span>
+            <div class="flex items-center">
+                <span class="text-2xl font-black italic tracking-tighter heading-font uppercase">TIRE CARE<span class="gold-text"> MOBILE</span></span>
             </div>
-            <div class="hidden md:flex space-x-8 items-center">
-                <a href="#services" class="text-sm font-semibold hover:text-yellow-500 transition">Services</a>
-                <a href="#reviews" class="text-sm font-semibold hover:text-yellow-500 transition">Testimonials</a>
-                <a href="tel:8136480099" class="gold-bg text-black px-6 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 hover:scale-105 transition transform">
-                    <i class="fas fa-phone"></i> (813) 648-0099
+            <div class="hidden md:flex items-center space-x-10 text-[11px] font-black tracking-[0.2em]">
+                <a href="#services" class="hover:text-yellow-500 transition">SERVICES</a>
+                <a href="#reviews" class="hover:text-yellow-500 transition">TESTIMONIALS</a>
+                <a href="#areas" class="hover:text-yellow-500 transition">SERVICE AREAS</a>
+                <a href="tel:8136480099" class="gold-bg text-black px-8 py-3 rounded-full flex items-center gap-2 hover:scale-105 transition shadow-lg shadow-yellow-500/10">
+                    <i class="fas fa-phone-alt"></i> (813) 648-0099
                 </a>
             </div>
         </div>
@@ -41,150 +49,165 @@
 
     <section class="hero-bg h-screen flex items-center justify-center px-6 relative">
         <div class="max-w-5xl text-center reveal">
-            <h2 class="gold-text font-bold tracking-[0.3em] uppercase text-sm mb-4">Tampa Bay's Premier Mobile Shop</h2>
-            <h1 class="text-5xl md:text-8xl font-extrabold mb-8 leading-tight">White Glove <br><span class="italic font-light">Tire Service.</span></h1>
-            <p class="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10">
-                Specializing in Exotics, Luxury Sedans, and High-Performance SUVs. We bring the elite shop experience directly to your home or office.
+            <div class="inline-block px-4 py-1 border border-yellow-500/40 rounded-full text-yellow-500 text-[10px] font-black mb-6 tracking-[0.4em] uppercase bg-yellow-500/5">
+                White Glove Mobile Service
+            </div>
+            <h1 class="text-5xl md:text-8xl font-black mb-8 leading-[1.05] tracking-tighter heading-font uppercase">Precision Care For <br><span class="gold-text">Elite Vehicles.</span></h1>
+            <p class="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-12 font-light leading-relaxed">
+                Specializing in Exotics, Luxury Sedans, and High-Performance Supercars. We bring the tire shop to your driveway in Clearwater & St. Pete.
             </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <a href="tel:8136480099" class="bg-white text-black px-10 py-5 rounded-full font-black uppercase text-sm tracking-widest hover:bg-zinc-200 transition w-full md:w-auto">Call Yez Now</a>
-                <p class="text-zinc-500 font-medium">Available 24/7/365</p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                <a href="tel:8136480099" class="w-full md:w-auto bg-white text-black px-12 py-5 rounded-full font-black uppercase text-xs tracking-widest hover:bg-zinc-200 transition">Request Immediate Service</a>
+                <div class="flex items-center gap-3">
+                    <div class="flex text-yellow-500">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <span class="text-zinc-500 text-xs font-bold uppercase tracking-widest">67+ 5-Star Reviews</span>
+                </div>
             </div>
         </div>
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-zinc-500">
-            <i class="fas fa-chevron-down text-2xl"></i>
+        <div class="absolute bottom-10 animate-bounce text-zinc-600">
+            <i class="fas fa-mouse text-2xl"></i>
         </div>
     </section>
 
-    <section id="services" class="py-24 px-6 bg-[#0a0a0a]">
+    <div class="bg-zinc-950 border-y border-zinc-900 py-20">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div class="reveal">
+                <div class="text-4xl font-black gold-text mb-2 heading-font italic">24/7</div>
+                <div class="text-zinc-500 uppercase text-[10px] tracking-widest font-black">Emergency Service</div>
+            </div>
+            <div class="reveal">
+                <div class="text-4xl font-black gold-text mb-2 heading-font italic">30M</div>
+                <div class="text-zinc-500 uppercase text-[10px] tracking-widest font-black">Average Arrival</div>
+            </div>
+            <div class="reveal">
+                <div class="text-4xl font-black gold-text mb-2 heading-font italic">100%</div>
+                <div class="text-zinc-500 uppercase text-[10px] tracking-widest font-black">Zero-Scratch Guarantee</div>
+            </div>
+            <div class="reveal">
+                <div class="text-4xl font-black gold-text mb-2 heading-font italic">VIP</div>
+                <div class="text-zinc-500 uppercase text-[10px] tracking-widest font-black">On-Site Installation</div>
+            </div>
+        </div>
+    </div>
+
+    <section id="services" class="py-32 px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="reveal">
-                    <h2 class="text-4xl font-bold mb-6">Expert Care For <br><span class="gold-text italic">Your Investment.</span></h2>
-                    <p class="text-zinc-400 mb-8 leading-relaxed">
-                        We understand that luxury wheels require a different level of precision. From <b>Porsche 911s</b> to <b>Maseratis</b> and <b>Mercedes-Benz</b>, we use specialized "touchless" techniques to ensure your rims stay flawless.
-                    </p>
-                    <ul class="space-y-4 mb-10">
-                        <li class="flex items-center gap-3 text-zinc-200"><i class="fas fa-check-circle gold-text"></i> Precision Mobile Balancing</li>
-                        <li class="flex items-center gap-3 text-zinc-200"><i class="fas fa-check-circle gold-text"></i> Luxury Rim Installation (Up to 24")</li>
-                        <li class="flex items-center gap-3 text-zinc-200"><i class="fas fa-check-circle gold-text"></i> 24/7 Roadside Emergency Rescue</li>
-                        <li class="flex items-center gap-3 text-zinc-200"><i class="fas fa-check-circle gold-text"></i> Financing Options Available</li>
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 reveal">
+                <div>
+                    <h2 class="text-4xl md:text-6xl font-black heading-font uppercase leading-none mb-4">Master <br><span class="gold-text">Services.</span></h2>
+                    <p class="text-zinc-500 max-w-sm font-medium">Equipped with the latest technology for high-speed balancing and touchless mounting.</p>
+                </div>
+                <div class="text-zinc-700 font-black text-6xl opacity-20 hidden md:block uppercase heading-font italic">Exotic Expert</div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass p-12 rounded-[2rem] reveal service-card">
+                    <i class="fas fa-car-side text-4xl gold-text mb-8"></i>
+                    <h3 class="text-2xl font-bold mb-4 uppercase heading-font italic">Exotic Replacement</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">Specialized handling for Ferrari, Lamborghini, Porsche, and Maserati. We offer new and quality used tires for every high-performance need.</p>
+                    <span class="text-zinc-600 text-[10px] font-black tracking-widest uppercase">Precision Fitment</span>
+                </div>
+                <div class="glass p-12 rounded-[2rem] reveal service-card">
+                    <i class="fas fa-tools text-4xl gold-text mb-8"></i>
+                    <h3 class="text-2xl font-bold mb-4 uppercase heading-font italic">Flat Repair</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">Quick response roadside flat repairs, rotations, and computerized balancing at your office or home to keep you moving.</p>
+                    <span class="text-zinc-600 text-[10px] font-black tracking-widest uppercase">Rapid Response</span>
+                </div>
+                <div class="glass p-12 rounded-[2rem] reveal service-card">
+                    <i class="fas fa-credit-card text-4xl gold-text mb-8"></i>
+                    <h3 class="text-2xl font-bold mb-4 uppercase heading-font italic">Flexible Financing</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">We offer financing options to make your premium tire installations easy and stress-free. Get four new tires without the wait.</p>
+                    <span class="text-zinc-600 text-[10px] font-black tracking-widest uppercase">Approvals On-Site</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-32 px-6 bg-[#030303]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <h2 class="text-4xl md:text-5xl font-black heading-font uppercase mb-4 italic">Client <span class="gold-text italic">Testimonials</span></h2>
+                <p class="text-zinc-500 text-xs font-bold tracking-[0.3em] uppercase">Built on a Reputation of Perfection</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass p-10 rounded-3xl reveal border-l-4 border-l-[#D4AF37]">
+                    <p class="text-zinc-300 italic mb-8 leading-loose">"The only service I trust. They changed my tires and brakes on my <b>Mercedes S550</b> in the parking lot at my job. Incredibly professional and fast."</p>
+                    <div class="font-bold text-xs uppercase tracking-widest text-white">Stephen Peterson</div>
+                    <div class="text-[10px] text-zinc-500 mt-1 uppercase">S-Class Owner</div>
+                </div>
+                <div class="glass p-10 rounded-3xl reveal">
+                    <p class="text-zinc-300 italic mb-8 leading-loose">"My rims came in for my <b>Porsche 911</b> and they came through the next morning and saved the day. Meticulous care and zero scratches."</p>
+                    <div class="font-bold text-xs uppercase tracking-widest text-white">Duran Waters</div>
+                    <div class="text-[10px] text-zinc-500 mt-1 uppercase">Porsche Owner</div>
+                </div>
+                <div class="glass p-10 rounded-3xl reveal">
+                    <p class="text-zinc-300 italic mb-8 leading-loose">"Helpful, fair price, and took the time to educate me. Made sure my <b>Maserati</b> was taken care of the right way. Saved me a bundle compared to the dealer!"</p>
+                    <div class="font-bold text-xs uppercase tracking-widest text-white">KAI</div>
+                    <div class="text-[10px] text-zinc-500 mt-1 uppercase">Maserati Owner</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="areas" class="py-32 px-6 border-t border-zinc-900">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+            <div class="reveal">
+                <h2 class="text-4xl md:text-6xl font-black heading-font uppercase mb-8 italic">Tampa Bay <br><span class="gold-text">Coverage.</span></h2>
+                <p class="text-zinc-400 text-lg mb-10 font-light italic">"We bring the tire shop to you! Fast, affordable mobile tire service at your home, work, or roadside."</p>
+                <div class="grid grid-cols-2 gap-y-4 gap-x-12 text-zinc-300 text-sm font-bold uppercase tracking-widest">
+                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt gold-text"></i> St. Petersburg</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt gold-text"></i> Clearwater</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt gold-text"></i> Largo</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt gold-text"></i> Tampa</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt gold-text"></i> Riverview</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt gold-text"></i> Dunedin</div>
+                </div>
+            </div>
+            <div class="reveal glass p-2 rounded-[2.5rem]">
+                <div class="bg-zinc-900 h-[400px] rounded-[2rem] flex flex-col items-center justify-center text-center p-10">
+                    <i class="fas fa-phone-volume text-5xl gold-text mb-6 animate-pulse"></i>
+                    <h3 class="text-3xl font-black heading-font uppercase mb-4 italic">Available Now</h3>
+                    <p class="text-zinc-500 text-sm mb-8">Skip the tow truck. We come to you 24 hours a day, 7 days a week.</p>
+                    <a href="tel:8136480099" class="text-3xl font-black gold-text hover:scale-110 transition tracking-tighter">(813) 648-0099</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-20 px-6 border-t border-zinc-900">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-16">
+            <div class="max-w-sm">
+                <span class="text-2xl font-black italic heading-font uppercase mb-6 block tracking-tighter">TIRE CARE<span class="gold-text"> MOBILE</span></span>
+                <p class="text-zinc-600 text-xs leading-loose font-medium mb-8">
+                    TIRE CARE MOBILE SERVICE: The pinnacle of mobile tire solutions. We sell and install new and quality used tires, plus rotations, flat repairs, and emergency roadside assistance for elite performance vehicles.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-16">
+                <div>
+                    <h4 class="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-400 mb-8">Menu</h4>
+                    <ul class="space-y-4 text-xs font-bold tracking-widest">
+                        <li><a href="#services" class="hover:text-yellow-500 transition">Services</a></li>
+                        <li><a href="#reviews" class="hover:text-yellow-500 transition">Reviews</a></li>
+                        <li><a href="#areas" class="hover:text-yellow-500 transition">Areas</a></li>
                     </ul>
                 </div>
-                <div class="grid grid-cols-2 gap-4 reveal">
-                    <div class="glass p-8 rounded-3xl text-center">
-                        <i class="fas fa-bolt text-3xl gold-text mb-4"></i>
-                        <h4 class="font-bold uppercase text-xs tracking-widest">Fast</h4>
-                        <p class="text-2xl font-bold mt-2">30-60m</p>
-                    </div>
-                    <div class="glass p-8 rounded-3xl text-center mt-8">
-                        <i class="fas fa-shield-halved text-3xl gold-text mb-4"></i>
-                        <h4 class="font-bold uppercase text-xs tracking-widest">Secure</h4>
-                        <p class="text-2xl font-bold mt-2">Insured</p>
-                    </div>
+                <div>
+                    <h4 class="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-400 mb-8">Contact</h4>
+                    <p class="text-xs font-black tracking-widest text-white mb-4 italic">Open 24/7</p>
+                    <p class="text-xs font-bold text-zinc-500">(813) 648-0099</p>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="reviews" class="py-24 px-6 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 reveal">
-                <div class="flex justify-center gap-1 text-yellow-500 mb-4 text-xl">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <h2 class="text-4xl font-bold">What Our Clients Say</h2>
-                <p class="text-zinc-500 mt-2 italic">100% Five-Star Rating based on 67+ Professional Reviews</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="glass p-8 rounded-2xl reveal">
-                    <p class="text-zinc-300 italic mb-6">"Tire Care Mobile Service is absolutely amazing! They took the time to educate me about my tires. Made sure my Maserati was taken care of the right way... saved me a bundle!"</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 gold-bg rounded-full flex items-center justify-center font-bold text-black">K</div>
-                        <div>
-                            <p class="font-bold text-sm">KAI</p>
-                            <p class="text-xs text-zinc-500">Maserati Owner</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass p-8 rounded-2xl reveal">
-                    <p class="text-zinc-300 italic mb-6">"My rims came in for my Porsche 911 and my guy Yez came through the next morning and saved the day. Last minute, amazing service."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 gold-bg rounded-full flex items-center justify-center font-bold text-black">D</div>
-                        <div>
-                            <p class="font-bold text-sm">Duran Waters</p>
-                            <p class="text-xs text-zinc-500">Porsche 911 Owner</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass p-8 rounded-2xl reveal">
-                    <p class="text-zinc-300 italic mb-6">"Yez was awesome. He changed my front tires and brakes on my Mercedes S550 in the parking lot at my job. No need to spend time after work at a shop!"</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 gold-bg rounded-full flex items-center justify-center font-bold text-black">S</div>
-                        <div>
-                            <p class="font-bold text-sm">Stephen Peterson</p>
-                            <p class="text-xs text-zinc-500">Mercedes S550 Owner</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass p-8 rounded-2xl reveal">
-                    <p class="text-zinc-300 italic mb-6">"Best tire service ever they hooked me up with everything and balance my tires and all. Yez is a game changer. He brings the shop to you."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 gold-bg rounded-full flex items-center justify-center font-bold text-black">Z</div>
-                        <div>
-                            <p class="font-bold text-sm">Zuhair</p>
-                            <p class="text-xs text-zinc-500">Verified Client</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass p-8 rounded-2xl reveal">
-                    <p class="text-zinc-300 italic mb-6">"He came all the way to Temple Terrace and took care of me in less than 30 minutes. First time using road service and it was the best experience."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 gold-bg rounded-full flex items-center justify-center font-bold text-black">I</div>
-                        <div>
-                            <p class="font-bold text-sm">Ihab Khaled</p>
-                            <p class="text-xs text-zinc-500">Verified Client</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass p-8 rounded-2xl reveal">
-                    <p class="text-zinc-300 italic mb-6">"Yez was quick and super detailed. Amazing work! Highly recommend!! Very professional. Best tire service in the bay area."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 gold-bg rounded-full flex items-center justify-center font-bold text-black">J</div>
-                        <div>
-                            <p class="font-bold text-sm">Jonathan Carreras</p>
-                            <p class="text-xs text-zinc-500">Local Guide</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="max-w-7xl mx-auto pt-16 mt-16 border-t border-zinc-900 text-center">
+            <p class="text-[9px] font-black uppercase tracking-[0.5em] text-zinc-800">© 2026 Tire Care Mobile Service | Luxury Automotive Excellence</p>
         </div>
-    </section>
-
-    <section class="py-24 bg-white text-black text-center px-6">
-        <div class="max-w-4xl mx-auto reveal">
-            <h2 class="text-4xl md:text-6xl font-black uppercase mb-8">Stuck? Let's get you <br>moving again.</h2>
-            <p class="text-xl mb-10 text-zinc-700 font-medium italic">Available now in St. Pete, Clearwater, Tampa, and surrounding areas.</p>
-            <a href="tel:8136480099" class="inline-block bg-black text-white text-2xl font-bold px-12 py-6 rounded-full hover:scale-105 transition shadow-2xl">
-                (813) 648-0099
-            </a>
-            <div class="mt-8 flex justify-center gap-8 font-bold text-sm uppercase tracking-widest opacity-50">
-                <span>Fast</span>
-                <span>Honest</span>
-                <span>Professional</span>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-12 px-6 border-t border-white/10 text-center text-zinc-600">
-        <p class="text-sm tracking-widest uppercase mb-4">&copy; 2026 Tire Care Mobile Service</p>
-        <p class="text-xs">Serving Pinellas & Hillsborough County | 24-Hour Emergency Service</p>
     </footer>
 
     <script>
@@ -193,15 +216,14 @@
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
+                var elementVisible = 80;
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
                 }
             }
         }
         window.addEventListener("scroll", reveal);
-        // Initial call to show elements already in view
-        reveal();
+        reveal(); // Initial call
     </script>
 </body>
 </html>
