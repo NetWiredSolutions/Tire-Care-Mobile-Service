@@ -103,6 +103,28 @@
 
     /* Smooth anchor offset because of fixed nav */
     section { scroll-margin-top: 90px; }
+
+    /* ============================
+       MOBILE HERO FIX (ADDED)
+       ============================ */
+    @media (max-width: 768px) {
+      .hero-safe {
+        padding-top: 110px;   /* pushes badge/title below fixed header */
+        padding-bottom: 32px;
+        height: auto;         /* prevents cramming on short screens */
+        min-height: 100vh;    /* still fills the screen nicely */
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero-title {
+        font-size: 2.35rem;
+        line-height: 1.1;
+      }
+      .hero-subtitle {
+        font-size: 1.05rem;
+      }
+    }
   </style>
 
   <!-- Local Business + Services (SEO Schema) -->
@@ -176,17 +198,17 @@
   </nav>
 
   <!-- HERO -->
-  <section class="hero-gradient h-screen flex items-center justify-center text-center px-4">
+  <section class="hero-gradient hero-safe h-screen flex items-center justify-center text-center px-4">
     <div class="max-w-4xl">
       <div class="inline-block px-4 py-1 border border-yellow-500/70 rounded-full text-yellow-500 text-sm font-bold mb-6 tracking-widest uppercase bg-black/30 backdrop-blur">
         5-Star Rated • White Glove Mobile Service
       </div>
 
-      <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+      <h1 class="hero-title text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
         Elite Tire & Wheel Care For <span class="gold-text">Luxury Performance</span>
       </h1>
 
-      <p class="text-xl md:text-2xl text-zinc-300 mb-10 max-w-2xl mx-auto">
+      <p class="hero-subtitle text-xl md:text-2xl text-zinc-300 mb-10 max-w-2xl mx-auto">
         We bring the tire shop to your driveway or roadside. Mobile tire mounting, balancing, wheel services, and emergency flat repairs across Clearwater & St. Pete.
       </p>
 
