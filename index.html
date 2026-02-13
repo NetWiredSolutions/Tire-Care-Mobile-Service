@@ -404,13 +404,14 @@
           “Roadside, driveway, home, or office — we bring the tire shop to you.”
         </p>
 
+        <!-- UPDATED: Tampa + nearby areas (ONLY CHANGE IN THIS SECTION) -->
         <div class="grid sm:grid-cols-2 gap-4 text-zinc-300">
-          <div class="flex items-center"><i class="fas fa-location-dot gold-text mr-3"></i> Clearwater & Clearwater Beach</div>
-          <div class="flex items-center"><i class="fas fa-location-dot gold-text mr-3"></i> St. Petersburg & St. Pete Beach</div>
-          <div class="flex items-center"><i class="fas fa-location-dot gold-text mr-3"></i> Largo & Belleair</div>
-          <div class="flex items-center"><i class="fas fa-location-dot gold-text mr-3"></i> Palm Harbor & Dunedin</div>
-          <div class="flex items-center"><i class="fas fa-location-dot gold-text mr-3"></i> Tampa & Surrounding Areas</div>
-          <div class="flex items-center"><i class="fas fa-location-dot gold-text mr-3"></i> Pinellas & Hillsborough County</div>
+          <div class="flex items-center"><i class="fas fa-location-dot gold-text mr-3"></i> Tampa & South Tampa</div>
+          <div class="flex items-center"><i class="fas fa-location-dot gold-text mr-3"></i> Brandon & Valrico</div>
+          <div class="flex items-center"><i class="fas fa-location-dot gold-text mr-3"></i> Riverview & Apollo Beach</div>
+          <div class="flex items-center"><i class="fas fa-location-dot gold-text mr-3"></i> Carrollwood & North Tampa</div>
+          <div class="flex items-center"><i class="fas fa-location-dot gold-text mr-3"></i> Westchase & Town ’n’ Country</div>
+          <div class="flex items-center"><i class="fas fa-location-dot gold-text mr-3"></i> Hillsborough County & Nearby Areas</div>
         </div>
 
         <div class="mt-10 flex flex-col sm:flex-row gap-4">
@@ -451,25 +452,11 @@
         </p>
       </div>
 
-      <!-- Controls -->
+      <!-- Controls (UPDATED: removed filtering UI, kept everything else) -->
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
         <div class="flex items-center gap-3 text-zinc-400">
           <i class="fa-brands fa-google text-xl"></i>
           <span class="text-sm">Source: Google Reviews</span>
-        </div>
-
-        <div class="flex items-center gap-3">
-          <span class="text-sm text-zinc-400 font-semibold">Sort by</span>
-          <div class="relative">
-            <select id="reviewSort"
-              class="appearance-none bg-zinc-950 border border-zinc-800 text-white rounded-xl px-4 py-3 pr-10 text-sm font-semibold hover:border-yellow-500 transition focus:outline-none focus:ring-2 focus:ring-yellow-500/30">
-              <option value="relevant" selected>Most relevant</option>
-              <option value="newest">Newest</option>
-              <option value="highest">Highest</option>
-              <option value="lowest">Lowest</option>
-            </select>
-            <i class="fas fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-zinc-500 pointer-events-none"></i>
-          </div>
         </div>
       </div>
 
@@ -782,40 +769,7 @@
     </div>
   </footer>
 
-  <!-- SORT SCRIPT -->
-  <script>
-    (function () {
-      const sort = document.getElementById("reviewSort");
-      const grid = document.getElementById("reviewsGrid");
-      if (!sort || !grid) return;
-
-      function toNum(v) {
-        const n = Number(v);
-        return Number.isFinite(n) ? n : 0;
-      }
-
-      sort.addEventListener("change", () => {
-        const cards = Array.from(grid.querySelectorAll(".review-card"));
-        const type = sort.value;
-
-        cards.sort((a, b) => {
-          const ar = toNum(a.dataset.rating);
-          const br = toNum(b.dataset.rating);
-          const am = toNum(a.dataset.minutes);   // smaller = newer
-          const bm = toNum(b.dataset.minutes);
-          const aRel = toNum(a.dataset.relevant);
-          const bRel = toNum(b.dataset.relevant);
-
-          if (type === "newest") return am - bm;
-          if (type === "highest") return br - ar;
-          if (type === "lowest") return ar - br;
-          return bRel - aRel; // relevant
-        });
-
-        cards.forEach(card => grid.appendChild(card));
-      });
-    })();
-  </script>
+  <!-- (REMOVED) SORT SCRIPT -->
 
 </body>
 </html>
